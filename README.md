@@ -24,3 +24,33 @@ You can view or download the demo videos from Google Drive:
 - Responsive design for mobile and desktop
 
 "# Travel_Explorer_website" 
+
+---
+
+## New: Explore Destinations (Unsplash + OpenWeatherMap)
+
+Search any destination to see recent photos and current weather.
+
+### Setup API Keys
+
+1. Create a free account and get keys:
+   - Unsplash Developer: `https://unsplash.com/developers`
+   - OpenWeatherMap: `https://openweathermap.org/api`
+
+2. Provide keys to the app (pick one):
+   - Inline in HTML (quick demo): add this before the closing `</body>` in `index.html`:
+
+```html
+<script>
+  window.UNSPLASH_ACCESS_KEY = 'YOUR_UNSPLASH_ACCESS_KEY';
+  window.OPENWEATHERMAP_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
+  // Alternatively, edit js/script.js and replace the placeholder strings
+</script>
+```
+
+3. Open `index.html` in a browser and use the Explore section.
+
+### Notes
+- The app falls back to placeholders (`YOUR_..._KEY`) if keys are not provided; API calls will fail until keys are set.
+- Weather is shown in °C using Kelvin→C conversion.
+- Unsplash photos link to the original on Unsplash in a new tab.

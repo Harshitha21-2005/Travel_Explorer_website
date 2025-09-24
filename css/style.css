@@ -403,6 +403,113 @@ header .search-bar-container label{
     font-size: 2.5rem;
     color: var(--orange);
 }
+.explore{
+    background: #f9f9f9;
+}
+.explore .explore-controls{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+.explore .explore-controls .inputBox{
+    flex: 1 1 40rem;
+}
+.explore .explore-controls .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border-radius: .5rem;
+    background: #fff;
+}
+.explore .explore-content{
+    display: grid;
+    grid-template-columns: 35rem 1fr;
+    gap: 2rem;
+}
+.explore .weather-card{
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    padding: 2rem;
+    min-height: 16rem;
+}
+.explore .weather-card h3{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: .5rem;
+}
+.explore .weather-card .temp{
+    font-size: 3.2rem;
+    color: var(--orange);
+    font-weight: 700;
+}
+.explore .weather-card .meta{
+    font-size: 1.4rem;
+    color: #666;
+}
+.explore .photos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.2rem;
+}
+.explore .photos-grid .photo{
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    background: #fff;
+}
+.explore .photos-grid .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.explore .photos-grid .photo:hover img{
+    transform: scale(1.03);
+}
+.explore-status{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #666;
+}
+.forecast{
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    padding: 1.5rem;
+}
+.forecast .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+}
+.forecast .day{
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.forecast .day .date{
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: .5rem;
+}
+.forecast .day .temp{
+    font-size: 1.8rem;
+    color: var(--orange);
+    font-weight: 700;
+}
+.forecast .day img{
+    width: 48px;
+    height: 48px;
+}
 .review .review-slider{
     padding-bottom: 2rem;
 }
@@ -571,6 +678,9 @@ header .search-bar-container label{
         padding: 1.5rem;
         margin: 1.5rem 0;
         background: #222;
+     }
+     .explore .explore-content{
+        grid-template-columns: 1fr;
      }
 }
 @media(max-width:450px){
